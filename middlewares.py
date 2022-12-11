@@ -14,6 +14,9 @@ def isAuthorization(request: Request):
         except:
             raise HTTPException(401)
         
+        if not (data):
+            raise HTTPException(401)
+        
         if (data.get("exp", 0) < timestamp()) or (data.get("username") == None):
             raise HTTPException(401)
         else:
