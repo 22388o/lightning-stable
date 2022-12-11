@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, PositiveFloat
 
 class UserSchema(BaseModel):
     username: str
@@ -6,4 +6,4 @@ class UserSchema(BaseModel):
 
 class SwapSchema(BaseModel):
     currency: str
-    value: float
+    value: PositiveFloat
