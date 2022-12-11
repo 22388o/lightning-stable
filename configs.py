@@ -22,5 +22,20 @@ LNM_NETWORK = environ.get("LNM_NETWORK", "mainnet")
 LNM_PASSPHRASE = environ["LNM_PASSPHRASE"]
 
 # Swap synthetic configuration.
-SYNT_SWAP_MAX = environ.get("SYNT_SWAP_MAX", 1000)
-SYNT_SWAP_MIN = environ.get("SYNT_SWAP_MIN", 0.01)
+SWAP_BTC_MAX = environ.get("SYNT_SWAP_BTC_MAX", 10000000)
+SWAP_BTC_MIN = environ.get("SYNT_SWAP_BTC_MIN", 500)
+
+SWAP_FIAT_MAX = environ.get("SYNT_SWAP_FIAT_MAX", 1000)
+SWAP_FIAT_MIN = environ.get("SYNT_SWAP_FIAT_MAX", 0.01)
+
+# Redis configuration.
+REDIS_HOST = environ.get("REDIS_HOST", "127.0.0.1")
+REDIS_PORT = environ.get("REDIS_PORT", 6379)
+REDIS_PASS = environ.get("REDIS_PASS", "")
+
+# Lnbits configuration.
+LNBITS_HOST = environ.get("LNBITS_HOST", "https://legend.lnbits.com/api")
+LNBITS_BASE_URL = environ.get("LNBITS_BASE_URL", "https://www.lnbits.com")
+LNBITS_WEBHOOK_URL = environ.get("LNBITS_WEBHOOK_URL", f"http://127.0.0.1:{API_PORT}/api/v1/lnbits/webhook")
+LNBITS_WALLET_ADMIN_KEY = environ["LNBITS_WALLET_ADMIN_KEY"]
+LNBITS_WALLET_INVOICE_KEY = environ["LNBITS_WALLET_INVOICE_KEY"]
