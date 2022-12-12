@@ -25,6 +25,7 @@ class Transaction(BaseModel):
     destination  = TextField()
     currency     = TextField(choices=["BTC", "USD"])
     value        = FloatField(default=0)
+    fee          = FloatField(default=0)
     status       = TextField(choices=["settled", "pending", "canceled"])
     typeof       = TextField(column_name="type", choices=["withdraw", "deposit"])
     description  = TextField(null=True)
